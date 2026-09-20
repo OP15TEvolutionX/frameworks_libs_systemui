@@ -148,21 +148,12 @@ internal class MSDLRepositoryImpl : MSDLRepository {
                         HapticComposition(
                             listOf(
                                 HapticCompositionPrimitive(
-                                    VibrationEffect.Composition.PRIMITIVE_TICK,
+                                    VibrationEffect.Composition.PRIMITIVE_THUD,
                                     scale = 1f,
                                     delayMillis = 0,
                                 ),
-                                HapticCompositionPrimitive(
-                                    VibrationEffect.Composition.PRIMITIVE_CLICK,
-                                    scale = 1f,
-                                    delayMillis = 52,
-                                ),
                             ),
-                            VibrationEffect.createWaveform(
-                                longArrayOf(5, 52, 10, 10, 10),
-                                intArrayOf(100, 0, 10, 255, 20),
-                                -1,
-                            ),
+                            VibrationEffect.createPredefined(VibrationEffect.EFFECT_HEAVY_CLICK),
                         )
                     },
                 HapticToken.NEUTRAL_CONFIRMATION_HIGH_EMPHASIS to
